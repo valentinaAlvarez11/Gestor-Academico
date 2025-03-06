@@ -41,8 +41,8 @@ export class ListaProductoComponent implements OnInit {
       text: 'No hay vuelta atrás',
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonText: 'Sip',
-      cancelButtonText: 'Nops'
+      confirmButtonText: 'Si',
+      cancelButtonText: 'No'
     }).then((result) => {
       if (result.value) {
         this.productoService.delete(id).subscribe(res => this.cargarProductos());

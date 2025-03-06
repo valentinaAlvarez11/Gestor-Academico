@@ -1,0 +1,21 @@
+<div class="container" *ngIf="curso">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header text-center">
+                    Detalle del Curso
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b>ID: </b>{{curso.id}}</li>
+                    <li class="list-group-item"><b>Código: </b>{{curso.codigo}}</li>
+                    <li class="list-group-item"><b>Nombre: </b>{{curso.nombre}}</li>
+                    <li class="list-group-item"><b>Descripción: </b>{{curso.descripcion}}</li>
+                    <li class="list-group-item"><b>Profesor: </b>{{curso.profesor.nombre}}</li>
+                </ul>
+                <div class="card-footer">
+                    <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

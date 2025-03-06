@@ -1,6 +1,7 @@
 import { IsNotEmpty, IsString, IsDate } from "class-validator";
 import { Type } from "class-transformer";
 import { IsNotBlank } from "src/decorators/is-not-blank.decorator";
+import { DepartamentoEntity } from "src/departamento/departamento.entity";
 
 export class ProfesorDto {
     @IsNotBlank({ message: 'El nombre no puede estar vacío' })
@@ -13,5 +14,6 @@ export class ProfesorDto {
     fechaContratacion: Date;
 
     @IsNotEmpty({ message: 'El departamento es obligatorio' })
-    departamentoId: number;
+    @Type(() => DepartamentoEntity)
+    departamento: DepartamentoEntity;
 }

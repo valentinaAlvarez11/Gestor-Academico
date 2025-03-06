@@ -2,10 +2,18 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import { Evaluacion } from "../app/models/evaluacion";
+
 export const environment = {
   production: false,
   productoURL: 'http://localhost:8080/producto/',
-  departamentoURL: 'http://localhost:8080/departamento/'
+  departamentoURL: 'http://localhost:8080/departamentos/',
+  profesorURL: 'http://localhost:8080/profesores/',
+  cursoURL: 'http://localhost:8080/cursos/',
+  estudianteURL: 'http://localhost:8080/estudiantes/',
+  matriculaURL: 'http://localhost:8080/matriculas/',
+  horarioURL: 'http://localhost:8080/horarios/',
+  EvaluacionURL: 'http://localhost:8080/evaluaciones/'
 };
 
 /*

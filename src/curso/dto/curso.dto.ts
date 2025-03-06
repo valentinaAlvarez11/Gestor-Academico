@@ -1,5 +1,7 @@
 import { IsNotEmpty, IsString, IsOptional, IsArray } from "class-validator";
+import { Type } from "class-transformer";
 import { IsNotBlank } from "src/decorators/is-not-blank.decorator";
+import { ProfesorEntity } from "src/profesor/profesor.entity";
 
 export class CursoDto {
     @IsNotBlank({ message: 'El código no puede estar vacío' })
@@ -17,7 +19,8 @@ export class CursoDto {
     descripcion?: string;
 
     @IsNotEmpty({ message: 'El profesor es obligatorio' })
-    profesorId: number;
+    @Type(() => ProfesorEntity)
+    profesor: ProfesorEntity;
 
     @IsOptional()
     @IsArray()

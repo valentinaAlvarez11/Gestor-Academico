@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="codigo">Código</label>
+                    <input type="text" class="form-control" id="codigo" name="codigo" [(ngModel)]="codigo" required autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion" required autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="profesorId">Profesor</label>
+                    <select class="form-control" id="profesorId" name="profesorId" [(ngModel)]="profesorId" (change)="profesorId = +$event.target.value" required>
+                        <option *ngFor="let profesor of profesores" [value]="profesor.id">{{ profesor.nombre }}</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn btn-outline-success btn-block" [disabled]="!f.valid">
+                    <i class="far fa-plus-square"></i> Guardar</button>
+                <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+            </form>
+        </div>
+    </div>
+</div>

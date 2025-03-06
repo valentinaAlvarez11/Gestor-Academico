@@ -1,3 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+  <a class="navbar-brand" href="#">Gestor academico</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+     
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/"><i class="far fa-list-alt"></i> Lista</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  routerLink="/nuevo-departamento"><i class="fas fa-plus-circle"></i> Nuevo Departamento</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav> 
 <div class="container" *ngIf="!listaVacia">
     <table class="table table-dark text-center">
         <thead>
@@ -15,8 +33,8 @@
             <td>{{departamento.id}}</td>
             <td>{{departamento.nombre}}</td>
             <td>{{departamento.codigo}}</td>
-            <td><button class="btn btn-outline-primary" routerLink="/detalle/{{departamento.id}}"><i class="far fa-eye"></i> Ver</button></td>
-            <td><button class="btn btn-outline-warning" routerLink="/editar/{{departamento.id}}"><i class="far fa-edit"></i> Editar</button></td>
+            <td><button class="btn btn-outline-primary" routerLink="/detalle-departamento/{{departamento.id}}"><i class="far fa-eye"></i> Ver</button></td>
+            <td><button class="btn btn-outline-warning" routerLink="/editar-departamento/{{departamento.id}}"><i class="far fa-edit"></i> Editar</button></td>
             <td><button class="btn btn-outline-danger" (click)="borrar(departamento.id)"><i class="far fa-trash-alt"></i> Eliminar</button></td>
           </tr>
         </tbody>

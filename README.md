@@ -71,6 +71,15 @@ $ mau deploy
 
 With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
 
+## Depuración en Visual Studio Code
+
+Para depurar servicios NestJS en Visual Studio Code, sigue estos pasos:
+
+1. Asegúrate de tener el archivo `launch.json` configurado en la carpeta `.vscode` de tu proyecto.
+2. Compila el proyecto ejecutando `npm run build`.
+3. Coloca puntos de interrupción (breakpoints) en tu código TypeScript.
+4. Inicia la depuración presionando `F5` o seleccionando la configuración de depuración "Debug NestJS" en el panel de depuración y haciendo clic en el botón de inicio.
+
 ## Resources
 
 Check out a few resources that may come in handy when working with NestJS:

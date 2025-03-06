@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="departamento">Departamento</label>
+                    <select class="form-control" id="departamento" name="departamento" [(ngModel)]="departamentoId" (change)="departamentoId = +$event.target.value" required>
+                        <option *ngFor="let dept of departamentos" [value]="dept.id">{{ dept.nombre }}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fechaContratacion">Fecha de Contratación</label>
+                    <input type="date" class="form-control" id="fechaContratacion" name="fechaContratacion" [(ngModel)]="fechaContratacion" required autocomplete="off">
+                </div>
+                <button type="submit" class="btn btn-outline-success btn-block" [disabled]="!f.valid">
+                    <i class="far fa-plus-square"></i> Guardar</button>
+                <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="container" *ngIf="estudiante">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header text-center">
+                    Detalle del Estudiante
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b>ID: </b>{{estudiante.id}}</li>
+                    <li class="list-group-item"><b>Nombre: </b>{{estudiante.nombre}}</li>
+                    <li class="list-group-item"><b>Fecha de Nacimiento: </b>{{estudiante.fechaNacimiento | date}}</li>
+                    <li class="list-group-item"><b>Matrícula: </b>{{estudiante.matricula}}</li>
+                </ul>
+                <div class="card-footer">
+                    <button class="btn btn-outline-primary btn-block" (click)="crearEstudiante()"><i class="fas fa-plus-circle"></i> Crear Estudiante</button>
+                    <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" *ngIf="!estudiante">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header text-center">
+                    Crear Nuevo Estudiante
+                </div>
+                <div class="card-body">
+                    <form (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" [(ngModel)]="nuevoEstudiante.nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                            <input type="date" class="form-control" id="fechaNacimiento" [(ngModel)]="nuevoEstudiante.fechaNacimiento" name="fechaNacimiento" required>
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary btn-block"><i class="fas fa-plus-circle"></i> Crear Estudiante</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

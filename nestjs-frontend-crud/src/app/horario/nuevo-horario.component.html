@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card">
+        <div class="card-header text-center">
+          Crear Nuevo Horario
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="onCreate()">
+            <div class="form-group">
+              <label for="dia">Día de la Semana</label>
+              <select class="form-control" id="dia" [(ngModel)]="dia" name="dia" required>
+                <option value="Lunes">Lunes</option>
+                <option value="Martes">Martes</option>
+                <option value="Miércoles">Miércoles</option>
+                <option value="Jueves">Jueves</option>
+                <option value="Viernes">Viernes</option>
+                <option value="Sábado">Sábado</option>
+                <option value="Domingo">Domingo</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="horaInicio">Hora de Inicio</label>
+              <input type="time" class="form-control" id="horaInicio" [(ngModel)]="horaInicio" name="horaInicio" required>
+            </div>
+            <div class="form-group">
+              <label for="horaFin">Hora de Fin</label>
+              <input type="time" class="form-control" id="horaFin" [(ngModel)]="horaFin" name="horaFin" required>
+            </div>
+            <button type="submit" class="btn btn-outline-primary btn-block"><i class="fas fa-plus-circle"></i> Crear Horario</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
