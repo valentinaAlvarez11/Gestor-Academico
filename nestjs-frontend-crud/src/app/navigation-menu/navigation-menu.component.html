@@ -1,27 +1,29 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Menu</a>
-  <div class="collapse navbar-collapse">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/departamentos">Departamentos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/profesores">Profesores</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/cursos">Cursos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/estudiantes">Estudiantes</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/matriculas">Matricula</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/horarios">Horario</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/evaluaciones">Evaluacion</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item"><a class="nav-link" routerLink="/departamentos">Departamentos</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="/profesores">Profesores</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="/cursos">Cursos</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="/estudiantes">Estudiantes</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="/matriculas">Matricula</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="/horarios">Horario</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="/evaluaciones">Evaluacion</a></li>
+    </ul>
+
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fas fa-user"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+          <li><a class="dropdown-item" routerLink="/login">Login</a></li>
+          <li><a class="dropdown-item" routerLink="/register">Register</a></li>
+        </ul>
       </li>
     </ul>
   </div>

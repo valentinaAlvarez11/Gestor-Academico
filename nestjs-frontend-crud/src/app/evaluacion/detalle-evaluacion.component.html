@@ -1,0 +1,21 @@
+<div class="container" *ngIf="evaluacion">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header text-center">
+                    Detalle de la Evaluación
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b>ID: </b>{{evaluacion.id}}</li>
+                    <li class="list-group-item"><b>Nombre: </b>{{evaluacion.nombre}}</li>
+                    <li class="list-group-item"><b>Fecha: </b>{{evaluacion.fecha | date}}</li>
+                    <li class="list-group-item"><b>Descripción: </b>{{evaluacion.descripcion}}</li>
+                    <li class="list-group-item"><b>Curso: </b>{{evaluacion.curso}}</li>
+                </ul>
+                <div class="card-footer">
+                    <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

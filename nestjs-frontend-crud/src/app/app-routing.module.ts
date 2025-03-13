@@ -29,9 +29,15 @@ import { ListaHorarioComponent } from './horario/lista-horario.component';
 import { NuevoHorarioComponent } from './horario/nuevo-horario.component';
 import { DetalleHorarioComponent } from './horario/detalle-horario.component';
 import { EditarHorarioComponent } from './horario/editar-horario.component';
+import { ListaEvaluacionComponent } from './evaluacion/lista-evaluacion.component';
+import { NuevaEvaluacionComponent } from './evaluacion/nueva-evaluacion.component';
+import { EditarEvaluacionComponent } from './evaluacion/editar-evaluacion.component';
+import { DetalleEvaluacionComponent } from './evaluacion/detalle-evaluacion.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+
 
 const routes: Routes = [
-  // { path: '', redirectTo: '/productos', pathMatch: 'full' }, // Redirigir a 'productos' por defecto
   { path: 'detalle/:id', component: DetalleProductoComponent },
   { path: 'nuevo', component: NuevoProductoComponent },
   { path: 'editar/:id', component: EditarProductoComponent },
@@ -53,13 +59,19 @@ const routes: Routes = [
   { path : 'editar-estudiante/:id', component: EditarEstudianteComponent},
   { path: 'detalle-estudiante/:id', component: DetalleEstudianteComponent},
   { path: 'matriculas', component: ListaMatriculaComponent},
-  { path: 'nuevo-matricula', component: NuevoMatriculaComponent},
+  { path: 'nueva-matricula', component: NuevoMatriculaComponent},
   { path: 'editar-matricula/:id', component: EditarMatriculaComponent},
   { path: 'detalle-matricula/:id', component: DetalleMatriculaComponent},
   { path: 'horarios', component: ListaHorarioComponent},
   { path: 'nuevo-horario', component: NuevoHorarioComponent},
   { path: 'detalle-horario/:id', component: DetalleHorarioComponent},
   { path: 'editar-horario/:id', component: EditarHorarioComponent}, 
+  { path: 'evaluaciones', component: ListaEvaluacionComponent},
+  { path: 'nueva-evaluacion', component: NuevaEvaluacionComponent},
+  { path: 'editar-evaluacion/:id', component: EditarEvaluacionComponent},
+  { path: 'detalle-evaluacion/:id', component: DetalleEvaluacionComponent},
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   { path: '**', redirectTo: '/departamentos' }
 ];
 

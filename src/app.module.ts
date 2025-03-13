@@ -14,6 +14,7 @@ import { CursoModule } from './curso/curso.module';
 import { HorarioModule } from './horario/horario.module';
 import { CalificacionModule } from './calificacion/calificacion.module';
 import { EvaluacionModule } from './evaluacion/evaluacion.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -45,7 +46,8 @@ import { EvaluacionModule } from './evaluacion/evaluacion.module';
     CursoModule,
     HorarioModule,
     CalificacionModule,
-    EvaluacionModule
+    EvaluacionModule,
+    AuthModule
   ],
   controllers: [AppController],
   providers: [AppService],

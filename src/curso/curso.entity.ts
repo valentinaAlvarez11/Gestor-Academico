@@ -50,4 +50,6 @@ export class CursoEntity {
 
     @OneToMany(() => HorarioEntity, (horario) => horario.curso)
     horario: HorarioEntity[];
+
+    
 }

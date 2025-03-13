@@ -13,7 +13,9 @@ export const environment = {
   estudianteURL: 'http://localhost:8080/estudiantes/',
   matriculaURL: 'http://localhost:8080/matriculas/',
   horarioURL: 'http://localhost:8080/horarios/',
-  EvaluacionURL: 'http://localhost:8080/evaluaciones/'
+  EvaluacionURL: 'http://localhost:8080/evaluaciones/',
+  authURL: 'http://localhost:8080/auth',
+  
 };
 
 /*

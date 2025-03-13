@@ -39,6 +39,12 @@ import { ListaHorarioComponent } from './horario/lista-horario.component';
 import { NuevoHorarioComponent } from './horario/nuevo-horario.component';
 import { EditarHorarioComponent } from './horario/editar-horario.component';
 import { DetalleHorarioComponent } from './horario/detalle-horario.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { ListaEvaluacionComponent } from './evaluacion/lista-evaluacion.component';
+import { NuevaEvaluacionComponent } from './evaluacion/nueva-evaluacion.component';
+import { EditarEvaluacionComponent } from './evaluacion/editar-evaluacion.component';
+import { DetalleEvaluacionComponent } from './evaluacion/detalle-evaluacion.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +78,12 @@ import { DetalleHorarioComponent } from './horario/detalle-horario.component';
     NuevoHorarioComponent,
     EditarHorarioComponent,
     DetalleHorarioComponent,
+    LoginComponent,
+    RegisterComponent,
+    ListaEvaluacionComponent,
+    NuevaEvaluacionComponent,
+    EditarEvaluacionComponent,
+    DetalleEvaluacionComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,76 @@
+/* Contenedor principal */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ffffff;
+}
+
+/* Caja del formulario */
+.login-box {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+/* Título */
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Estilo del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Campos de entrada y select */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #f9f9f9;
+}
+
+/* Estilo del select */
+select {
+    appearance: none;
+    cursor: pointer;
+}
+
+/* Botón de registro */
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Efecto hover */
+button:hover {
+    background: #0056b3;
+}
+
+/* Ícono en el botón */
+button i {
+    font-size: 1.2rem;
+}

@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+    <a class="navbar-brand" href="#">Gestor académico</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/"><i class="far fa-list-alt"></i> Lista</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/nueva-evaluacion"><i class="fas fa-plus-circle"></i> Nueva Evaluación</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container" *ngIf="!listaVacia">
+    <table class="table table-dark text-center">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Curso</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Ver</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Borrar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let evaluacion of evaluaciones">
+          <td>{{evaluacion.id}}</td>
+          <td>{{evaluacion.nombre}}</td>
+          <td>{{evaluacion.fecha | date}}</td>
+          <td>{{evaluacion.curso.nombre}}</td>
+          <td>{{evaluacion.descripcion}}</td>
+          <td><button class="btn btn-outline-primary" routerLink="/detalle-evaluacion/{{evaluacion.id}}"><i class="far fa-eye"></i> Ver</button></td>
+          <td><button class="btn btn-outline-warning" routerLink="/editar-evaluacion/{{evaluacion.id}}"><i class="far fa-edit"></i> Editar</button></td>
+          <td><button class="btn btn-outline-danger" (click)="borrar(evaluacion.id)"><i class="far fa-trash-alt"></i> Eliminar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="container" *ngIf="listaVacia">
+    <div class="p-3 mb-2 bg-dark text-white text-center"><h2>{{listaVacia}}</h2></div>
+  </div>
